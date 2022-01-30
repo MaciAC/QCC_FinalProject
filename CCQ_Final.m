@@ -26,7 +26,7 @@ xticklabels({'0', '\pi/2', '\pi'})
 
 %% Plot I(X;Y)
 P_e = 0.5*(1-sin(theta));
-H_P = -P_e*log(P_e) - (1-P_e)*log(1-P_e);
+H_P = -P_e*log2(P_e) - (1-P_e)*log2(1-P_e);
 I_Y = 1 - H_P;
 
 fplot(I_Y, [0, pi])
@@ -34,5 +34,6 @@ fplot(I_Y, [0, pi])
 hold on
 
 hold off
+legend('I(X;B)' ,'I(X;Y)')
 xticks([0, pi/2, pi])
 xticklabels({'0', '\pi/2', '\pi'})
